@@ -9,7 +9,6 @@
 </head>
 <body>
   <div id="app" class="container py-16">
-    <!-- Wizard -->
     <section id="wizard" class="card">
       <div class="card__body">
         <h2 id="wizard-title">Bem-vindo!</h2>
@@ -21,7 +20,6 @@
       </div>
     </section>
 
-    <!-- Aplicação principal -->
     <section id="main-app" class="hidden flex flex-col gap-16">
       <nav class="navbar flex gap-8 items-center py-8">
         <button class="btn btn--outline" data-route="dashboard">Dashboard</button>
@@ -31,7 +29,6 @@
         <button class="btn btn--outline" data-route="dre">DRE</button>
       </nav>
 
-      <!-- Páginas -->
       <section id="dashboard"    data-page class="hidden"></section>
       <section id="insumos"      data-page class="hidden"></section>
       <section id="subreceitas"  data-page class="hidden"></section>
@@ -40,7 +37,6 @@
     </section>
   </div>
 
-  <!-- Modal genérico -->
   <div id="modal-backdrop" class="modal-backdrop hidden"></div>
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal__content card">
@@ -55,6 +51,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
