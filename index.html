@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precificador Culinário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="container py-16">
+      <!-- Wizard de On-boarding -->
+      <section id="wizard" class="card">
+        <div class="card__body">
+          <h2 id="wizard-title">Bem-vindo!</h2>
+          <form id="wizard-form" class="flex flex-col gap-16"></form>
+          <div class="flex justify-between mt-8">
+            <button id="wizard-prev" class="btn btn--secondary hidden">Voltar</button>
+            <button id="wizard-next" class="btn btn--primary">Próximo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aplicação principal (escondida até fim do wizard) -->
+      <section id="main-app" class="hidden flex flex-col gap-16">
+        <nav class="navbar flex gap-8 items-center py-8">
+          <button class="btn btn--outline" data-route="dashboard">Dashboard</button>
+          <button class="btn btn--outline" data-route="insumos">Insumos</button>
+          <button class="btn btn--outline" data-route="subreceitas">Sub-receitas</button>
+          <button class="btn btn--outline" data-route="receitas">Receitas Finais</button>
+          <button class="btn btn--outline" data-route="dre">DRE</button>
+        </nav>
+
+        <!-- Pages -->
+        <section id="dashboard" data-page class="hidden"></section>
+        <section id="insumos" data-page class="hidden"></section>
+        <section id="subreceitas" data-page class="hidden"></section>
+        <section id="receitas" data-page class="hidden"></section>
+        <section id="dre" data-page class="hidden"></section>
+      </section>
+    </div>
+
+    <!-- Modais/Formulários -->
+    <div id="modal-backdrop" class="modal-backdrop hidden"></div>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal__content card">
+        <div class="card__body">
+          <h3 id="modal-title"></h3>
+          <form id="modal-form" class="flex flex-col gap-16 pt-16"></form>
+          <div class="flex justify-between mt-8">
+            <button id="modal-cancel" class="btn btn--secondary">Cancelar</button>
+            <button id="modal-save" class="btn btn--primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
